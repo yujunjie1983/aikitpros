@@ -17,10 +17,10 @@ export default defineComponent({
   },
   computed: {
     siteTitle() {
-      return this.$store.state.site?.title || 'AceData';
+      return this.$store.state.site?.title || 'Aikit Pros';
     },
     url() {
-      return 'https://platform.acedata.cloud/favicon.ico';
+      return 'https://i.imgant.com/v2/LfGdDf9.png';
     }
   }
 });
