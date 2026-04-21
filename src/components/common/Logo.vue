@@ -20,7 +20,7 @@ export default defineComponent({
       return this.$store.state.site?.title || 'Aikit Pros';
     },
     url() {
-      return 'https://i.imgant.com/v2/LfGdDf9.png';
+            return 'https://i.imgant.com/v2/IrYCPmG.png';
     }
   }
 });
