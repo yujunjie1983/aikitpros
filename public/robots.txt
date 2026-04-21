@@ -39,5 +39,5 @@ Disallow: /deepseek/conversations/
 # Assets
 Disallow: /assets/
 
-Sitemap: https://hub.acedata.cloud/sitemap.xml
-Sitemap: https://hub.acedata.cloud/llms.txt
+Sitemap: https://www.aikitpros.com/sitemap.xml
+Sitemap: https://www.aikitpros.com/llms.txt
