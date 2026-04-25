@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "npm run build && cp public/landing.html dist/landing.html && cp public/demo.html dist/demo.html",
+  "buildCommand": "npm run build && cp public/landing.html dist/landing.html && cp public/demo.html dist/demo.html && cp public/landing-zh.html dist/landing-zh.html && cp public/pricing.html dist/pricing.html",
   "installCommand": "yarn",
   "redirects": [
     { "source": "/", "destination": "/landing.html", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/((?!landing.html|demo.html|assets|favicon.ico|robots.txt|sitemap.xml|llms.txt).*)", "destination": "/index.html" }
+    { "source": "/((?!landing.html|landing-zh.html|demo.html|pricing.html|assets|favicon.ico|robots.txt|sitemap.xml|llms.txt).*)", "destination": "/index.html" }
   ]
 }
