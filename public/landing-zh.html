@@ -10,6 +10,7 @@
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0b0b14;color:#eaeaf0;line-height:1.7}
 .container{max-width:1080px;margin:0 auto;padding:0 24px}
 header{padding:24px 0;border-bottom:1px solid #1f1f2e}
+header .container{display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:700;font-size:22px;background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;color:transparent}
 nav a{color:#cfcfdb;text-decoration:none;margin-left:24px;font-size:14px}
 nav a.cta{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;padding:8px 16px;border-radius:8px}
@@ -31,27 +32,28 @@ nav a.cta{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;padding:8
 .pricing .note{color:#a8a8b8;font-size:14px;margin-bottom:24px}
 footer{padding:48px 0;border-top:1px solid #1f1f2e;text-align:center;color:#7a7a8a;font-size:13px;margin-top:48px}
 footer a{color:#cfcfdb;margin:0 12px;text-decoration:none}
+@media(max-width:640px){nav a{margin-left:12px;font-size:13px}.hero h1{font-size:34px}}
 </style>
 </head>
 <body>
-<header><div class="container"><div class="logo">AikitPros</div></div></header>
+<header><div class="container"><div class="logo">AikitPros</div><nav><a href="#features">功能</a><a href="#how">工作流</a><a class="cta" href="/chatgpt/conversations">启动应用</a></nav></div></header>
 <main class="container">
 <section class="hero">
 <h1>一份 Brief，交付<span>一整套广告 Campaign</span></h1>
 <p>输入产品介绍，Aikit Pros 自动生成文案、主图、短视频、背景音乐和社媒文案。多模型聚合，按调用付费，单次 Campaign 成本约 0.35 美元。</p>
-<div class="btns"><a class="btn btn-primary" href="https://aikitpros.com/signup">免费试用</a><a class="btn btn-secondary" href="/demo.html">查看演示</a></div>
+<div class="btns"><a class="btn btn-primary" href="/chatgpt/conversations">免费试用</a><a class="btn btn-secondary" href="/demo.html">查看演示</a></div>
 </section>
-<section class="features">
+<section id="features" class="features">
 <div class="feature"><h3>多模型一站式</h3><p>GPT-4o 文案、Midjourney 级别图像、Sora 级别视频、Suno 级别音乐，同一个 API、同一本账单。</p></div>
 <div class="feature"><h3>成本透明</h3><p>以前订阅 SaaS 每月上百美元，现在按次计费。一次完整 Campaign 约 0.35 美元。</p></div>
 <div class="feature"><h3>30 秒出稿</h3><p>基于 Dify 工作流调度，各模型并行调用，从提交 brief 到完整交付平均 30 秒。</p></div>
 <div class="feature"><h3>多渠道适配</h3><p>一次生成，同时输出微信、小红书、抖音、Instagram、TikTok、X 适配版本。</p></div>
 </section>
-<section class="pricing">
+<section id="how" class="pricing">
 <h2>透明定价</h2>
 <div class="price">¥ 2.5 / 次</div>
 <p class="note">单次完整 Campaign 生成。首次注册赠送免费体验额度。</p>
-<a class="btn btn-primary" href="https://aikitpros.com/signup">立即开始</a>
+<a class="btn btn-primary" href="/chatgpt/conversations">立即开始</a>
 </section>
 </main>
 <footer><div class="container"><a href="https://aikitpros.com">English</a> | <a href="/demo.html">演示</a> | <a href="/pricing.html">价格</a> | <a href="https://medium.com/@yujunjie1983">技术博客</a><br><br>© 2026 Aikit Pros. Powered by Ace Data Cloud.</div></footer>
