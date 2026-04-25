@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build && cp public/landing.html dist/landing.html",
   "installCommand": "yarn",
-  "rewrites": [
-    { "source": "/", "destination": "/landing.html" },
-    { "source": "/((?!landing.html|assets|favicon.ico|robots.txt|sitemap.xml|llms.txt).*)", "destination": "/index.html" }
+  "redirects": [
+    { "source": "/", "destination": "/landing.html", "permanent": false }
   ]
 }
