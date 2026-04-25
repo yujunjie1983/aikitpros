@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build && cp public/landing.html dist/landing.html",
+  "buildCommand": "npm run build && cp public/landing.html dist/landing.html && cp public/demo.html dist/demo.html",
   "installCommand": "yarn",
   "redirects": [
     { "source": "/", "destination": "/landing.html", "permanent": false }
