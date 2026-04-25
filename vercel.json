@@ -3,7 +3,9 @@
   "buildCommand": "npm run build && cp public/landing.html dist/landing.html && cp public/demo.html dist/demo.html && cp public/landing-zh.html dist/landing-zh.html && cp public/pricing.html dist/pricing.html",
   "installCommand": "yarn",
   "redirects": [
-    { "source": "/", "destination": "/landing.html", "permanent": false }
+    { "source": "/", "destination": "/landing.html", "permanent": false },
+    { "source": "/", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false },
+    { "source": "/landing.html", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false }
   ],
   "rewrites": [
     { "source": "/((?!landing.html|landing-zh.html|demo.html|pricing.html|assets|favicon.ico|robots.txt|sitemap.xml|llms.txt).*)", "destination": "/index.html" }
