@@ -12,8 +12,12 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 header{padding:24px 0;border-bottom:1px solid #1f1f2e}
 header .container{display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:700;font-size:22px;background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;color:transparent}
+nav{display:flex;align-items:center;gap:4px}
 nav a{color:#cfcfdb;text-decoration:none;margin-left:24px;font-size:14px}
 nav a.cta{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;padding:8px 16px;border-radius:8px}
+.lang-switch{display:inline-flex;align-items:center;margin-left:24px;background:#1a1a2e;border-radius:20px;padding:2px}
+.lang-switch a{padding:6px 14px;border-radius:18px;font-size:13px;text-decoration:none;color:#a0a0b5;transition:all .2s;margin:0}
+.lang-switch a.active{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff}
 .hero{padding:96px 0 64px;text-align:center}
 .hero h1{font-size:48px;line-height:1.25;margin-bottom:24px}
 .hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;color:transparent}
@@ -32,12 +36,11 @@ nav a.cta{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;padding:8
 .pricing .note{color:#a8a8b8;font-size:14px;margin-bottom:24px}
 footer{padding:48px 0;border-top:1px solid #1f1f2e;text-align:center;color:#7a7a8a;font-size:13px;margin-top:48px}
 footer a{color:#cfcfdb;margin:0 12px;text-decoration:none}
-/* Demo section */
 .demo-section{padding:64px 0;text-align:center}
 .demo-section h2{font-size:32px;margin-bottom:8px}
 .demo-section .sub{color:#a8a8b8;font-size:16px;margin-bottom:32px}
 .demo-box{max-width:640px;margin:0 auto;background:#13131f;border:1px solid #1f1f2e;border-radius:16px;padding:32px}
-.demo-box textarea{width:100%;background:#0b0b14;border:1px solid #2a2a3e;border-radius:10px;color:#eaeaf0;font-size:15px;padding:14px;resize:vertical;min-height:80px;font-family:inherit}
+.demo-box textarea{width:100%;background:#0b0b14;border:1px solid #2a2a3e;border-radius:10px;color:#eaeaf0;font-size:15px;padding:14px;resize:vertical;min-height:60px;font-family:inherit}
 .demo-box textarea:focus{outline:none;border-color:#a855f7}
 .demo-box .demo-btn{margin-top:16px;width:100%;padding:16px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;transition:opacity .2s}
 .demo-box .demo-btn:hover{opacity:.9}
@@ -49,11 +52,11 @@ footer a{color:#cfcfdb;margin:0 12px;text-decoration:none}
 .demo-result .group{margin-bottom:20px}
 .demo-cta{margin-top:24px;text-align:center}
 .demo-cta a{display:inline-block;padding:14px 32px;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;border-radius:10px;text-decoration:none;font-weight:600}
-@media(max-width:640px){nav a{margin-left:12px;font-size:13px}.hero h1{font-size:34px}.demo-box{padding:20px}}
+@media(max-width:640px){nav a{margin-left:12px;font-size:13px}.hero h1{font-size:34px}.demo-box{padding:20px}.lang-switch a{padding:4px 10px;font-size:12px}}
 </style>
 </head>
 <body>
-<header><div class="container"><div class="logo">AikitPros</div><nav><a href="#features">功能</a><a href="#demo">一键体验</a><a href="#how">工作流</a><a class="cta" href="/chatgpt/conversations">启动应用</a></nav></div></header>
+<header><div class="container"><div class="logo">AikitPros</div><nav><a href="#features">功能</a><a href="#demo">一键体验</a><a href="#how">工作流</a><a class="cta" href="/chatgpt/conversations">启动应用</a><div class="lang-switch"><a href="/landing.html">EN</a><a href="/landing-zh.html" class="active">中文</a></div></nav></div></header>
 <main class="container">
 <section class="hero">
 <h1>一份 Brief，交付<span>一整套广告 Campaign</span></h1>
@@ -89,7 +92,7 @@ footer a{color:#cfcfdb;margin:0 12px;text-decoration:none}
 </section>
 </main>
 <footer>
-<a href="https://aikitpros.com">English</a> | <a href="/demo.html">演示</a> | <a href="/pricing.html">价格</a> | <a href="https://medium.com/@yujunjie1983">技术博客</a><br><br>&copy; 2026 Aikit Pros. Powered by Ace Data Cloud.
+<a href="/landing.html">English</a> | <a href="/demo.html">演示</a> | <a href="/pricing.html">价格</a> | <a href="https://medium.com/@yujunjie1983">技术博客</a><br><br>&copy; 2026 Aikit Pros. Powered by Ace Data Cloud.
 </footer>
 <script>
 async function runDemo(){
