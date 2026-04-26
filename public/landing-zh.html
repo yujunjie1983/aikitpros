@@ -32,16 +32,48 @@ nav a.cta{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;padding:8
 .pricing .note{color:#a8a8b8;font-size:14px;margin-bottom:24px}
 footer{padding:48px 0;border-top:1px solid #1f1f2e;text-align:center;color:#7a7a8a;font-size:13px;margin-top:48px}
 footer a{color:#cfcfdb;margin:0 12px;text-decoration:none}
-@media(max-width:640px){nav a{margin-left:12px;font-size:13px}.hero h1{font-size:34px}}
+/* Demo section */
+.demo-section{padding:64px 0;text-align:center}
+.demo-section h2{font-size:32px;margin-bottom:8px}
+.demo-section .sub{color:#a8a8b8;font-size:16px;margin-bottom:32px}
+.demo-box{max-width:640px;margin:0 auto;background:#13131f;border:1px solid #1f1f2e;border-radius:16px;padding:32px}
+.demo-box textarea{width:100%;background:#0b0b14;border:1px solid #2a2a3e;border-radius:10px;color:#eaeaf0;font-size:15px;padding:14px;resize:vertical;min-height:80px;font-family:inherit}
+.demo-box textarea:focus{outline:none;border-color:#a855f7}
+.demo-box .demo-btn{margin-top:16px;width:100%;padding:16px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;transition:opacity .2s}
+.demo-box .demo-btn:hover{opacity:.9}
+.demo-box .demo-btn:disabled{opacity:.5;cursor:not-allowed}
+.demo-result{margin-top:24px;text-align:left;display:none}
+.demo-result h4{font-size:14px;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.demo-result ul{list-style:none;padding:0}
+.demo-result li{background:#0b0b14;border:1px solid #2a2a3e;border-radius:8px;padding:12px 16px;margin-bottom:8px;color:#eaeaf0;font-size:14px}
+.demo-result .group{margin-bottom:20px}
+.demo-cta{margin-top:24px;text-align:center}
+.demo-cta a{display:inline-block;padding:14px 32px;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;border-radius:10px;text-decoration:none;font-weight:600}
+@media(max-width:640px){nav a{margin-left:12px;font-size:13px}.hero h1{font-size:34px}.demo-box{padding:20px}}
 </style>
 </head>
 <body>
-<header><div class="container"><div class="logo">AikitPros</div><nav><a href="#features">功能</a><a href="#how">工作流</a><a class="cta" href="/chatgpt/conversations">启动应用</a></nav></div></header>
+<header><div class="container"><div class="logo">AikitPros</div><nav><a href="#features">功能</a><a href="#demo">一键体验</a><a href="#how">工作流</a><a class="cta" href="/chatgpt/conversations">启动应用</a></nav></div></header>
 <main class="container">
 <section class="hero">
 <h1>一份 Brief，交付<span>一整套广告 Campaign</span></h1>
 <p>输入产品介绍，Aikit Pros 自动生成文案、主图、短视频、背景音乐和社媒文案。多模型聚合，按调用付费，单次 Campaign 成本约 0.35 美元。</p>
-<div class="btns"><a class="btn btn-primary" href="/chatgpt/conversations">免费试用</a><a class="btn btn-secondary" href="/demo.html">查看演示</a></div>
+<div class="btns"><a class="btn btn-primary" href="#demo">一键体验 ↓</a><a class="btn btn-secondary" href="/demo.html">查看演示</a></div>
+</section>
+<section id="demo" class="demo-section">
+<h2>一键体验 AI 文案优化</h2>
+<p class="sub">输入你的产品简介，30 秒内获得专业广告文案方案 — 完全免费</p>
+<div class="demo-box">
+<textarea id="demo-headline" placeholder="产品标题，例如：智能降噪耳机 Pro Max" rows="1"></textarea>
+<textarea id="demo-body" placeholder="产品简介，例如：采用最新 ANC 3.0 芯片，续航 40 小时，蓝牙 5.4，支持空间音频。适合商务人士和音乐爱好者。" style="margin-top:12px" rows="3"></textarea>
+<button class="demo-btn" id="demo-run" onclick="runDemo()">一键生成广告文案</button>
+<div class="demo-result" id="demo-result">
+<div class="group" id="res-headlines"></div>
+<div class="group" id="res-hooks"></div>
+<div class="group" id="res-ctas"></div>
+<div class="demo-cta"><a href="/chatgpt/conversations">满意？启动完整 Campaign（含图片+视频+音乐）→</a></div>
+</div>
+</div>
 </section>
 <section id="features" class="features">
 <div class="feature"><h3>多模型一站式</h3><p>GPT-4o 文案、Midjourney 级别图像、Sora 级别视频、Suno 级别音乐，同一个 API、同一本账单。</p></div>
@@ -56,6 +88,33 @@ footer a{color:#cfcfdb;margin:0 12px;text-decoration:none}
 <a class="btn btn-primary" href="/chatgpt/conversations">立即开始</a>
 </section>
 </main>
-<footer><div class="container"><a href="https://aikitpros.com">English</a> | <a href="/demo.html">演示</a> | <a href="/pricing.html">价格</a> | <a href="https://medium.com/@yujunjie1983">技术博客</a><br><br>© 2026 Aikit Pros. Powered by Ace Data Cloud.</div></footer>
+<footer>
+<a href="https://aikitpros.com">English</a> | <a href="/demo.html">演示</a> | <a href="/pricing.html">价格</a> | <a href="https://medium.com/@yujunjie1983">技术博客</a><br><br>&copy; 2026 Aikit Pros. Powered by Ace Data Cloud.
+</footer>
+<script>
+async function runDemo(){
+  var btn=document.getElementById('demo-run');
+  var h=document.getElementById('demo-headline').value.trim();
+  var b=document.getElementById('demo-body').value.trim();
+  if(!h&&!b){alert('请至少输入产品标题或简介');return;}
+  btn.disabled=true;btn.textContent='AI 正在生成中…';
+  document.getElementById('demo-result').style.display='none';
+  try{
+    var res=await fetch('/api/optimize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({headline:h||'Product',body:b||h,mode:'copy'})});
+    var d=await res.json();
+    if(!res.ok)throw new Error(d.error||'请求失败');
+    function render(id,title,arr){
+      var el=document.getElementById(id);
+      if(!arr||!arr.length){el.innerHTML='';return;}
+      el.innerHTML='<h4>'+title+'</h4><ul>'+arr.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';
+    }
+    render('res-headlines','广告标题方案',d.headlines);
+    render('res-hooks','开场 Hook',d.hooks);
+    render('res-ctas','行动号召 CTA',d.ctas);
+    document.getElementById('demo-result').style.display='block';
+  }catch(e){alert('生成失败: '+e.message);}
+  btn.disabled=false;btn.textContent='一键生成广告文案';
+}
+</script>
 </body>
 </html>
