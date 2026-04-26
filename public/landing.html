@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AikitPros - One Brief. A Full Ad Campaign.</title>
-<meta name="description" content="AikitPros turns one brief into a full ad campaign: AI copy, images, video, music.">
-<meta property="og:title" content="AikitPros - One Brief. A Full Ad Campaign.">
-<meta property="og:description" content="AI-powered chat, image, video, music for full ad campaigns.">
+<title>AikitPros — AI Ad Copy Generator</title>
+<meta name="description" content="Generate professional ad headlines, hooks & CTAs in 30 seconds. Free demo, no signup. Pay-as-you-go credits.">
+<meta property="og:title" content="AikitPros — AI Ad Copy Generator">
+<meta property="og:description" content="Paste your product brief, get ad copy in 30s. Free demo. Buy credits when you need more.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b0b12;color:#e7e7ef;line-height:1.6}
-.c{max-width:1100px;margin:0 auto;padding:0 24px}
+.c{max-width:900px;margin:0 auto;padding:0 24px}
 header{padding:24px 0;display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:700;font-size:22px;background:linear-gradient(90deg,#8a7dff,#ff7db6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 nav{display:flex;align-items:center;gap:4px}
@@ -18,139 +18,137 @@ nav a{color:#c4c4d4;text-decoration:none;margin-left:24px;font-size:14px}
 .lang-switch{display:inline-flex;align-items:center;margin-left:24px;background:#1a1a2e;border-radius:20px;padding:2px}
 .lang-switch a{padding:6px 14px;border-radius:18px;font-size:13px;text-decoration:none;color:#a0a0b5;transition:all .2s;margin:0}
 .lang-switch a.active{background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff}
-.hero{padding:80px 24px 60px;text-align:center;max-width:1100px;margin:0 auto}
-.hero h1{font-size:56px;line-height:1.15;font-weight:800;margin:0 0 24px}
+.hero{padding:80px 24px 40px;text-align:center;max-width:900px;margin:0 auto}
+.hero h1{font-size:48px;line-height:1.15;font-weight:800;margin:0 0 20px}
 .hero h1 span{background:linear-gradient(90deg,#8a7dff,#ff7db6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:20px;color:#b6b6c8;max-width:720px;margin:0 auto 36px}
+.hero p{font-size:18px;color:#b6b6c8;max-width:600px;margin:0 auto 28px}
 .cta{display:inline-block;background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff;padding:16px 36px;border-radius:999px;text-decoration:none;font-weight:600;font-size:17px;box-shadow:0 10px 30px rgba(138,125,255,.35)}
-.cta.s{background:transparent;border:1px solid #3a3a4e;margin-left:12px;box-shadow:none}
-.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:60px 0}
-.card{background:#15151f;border:1px solid #23233a;border-radius:16px;padding:24px}
-.card h3{margin:0 0 8px;font-size:18px}
-.card p{color:#a0a0b5;font-size:14px;margin:0}
-.sec{padding:60px 0;border-top:1px solid #1d1d2e}
-.sec h2{font-size:34px;margin:0 0 16px;text-align:center}
-.sub{color:#a0a0b5;text-align:center;max-width:640px;margin:0 auto 40px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.step{background:#12121c;border-radius:14px;padding:22px;border:1px solid #23233a}
-.num{color:#8a7dff;font-weight:700;font-size:14px;margin-bottom:6px}
-/* Demo section */
-.demo-sec{padding:60px 0;text-align:center;border-top:1px solid #1d1d2e}
-.demo-sec h2{font-size:34px;margin:0 0 8px}
-.demo-sec .sub{margin-bottom:32px}
-.demo-box{max-width:640px;margin:0 auto;background:#15151f;border:1px solid #23233a;border-radius:16px;padding:32px}
-.demo-box textarea{width:100%;background:#0b0b12;border:1px solid #2a2a3e;border-radius:10px;color:#e7e7ef;font-size:15px;padding:14px;resize:vertical;min-height:60px;font-family:inherit}
+.trust{margin-top:20px;color:#70708a;font-size:14px}
+.trust b{color:#8a7dff}
+.sec{padding:50px 0;border-top:1px solid #1d1d2e}
+.sec h2{font-size:28px;margin:0 0 8px;text-align:center}
+.sub{color:#a0a0b5;text-align:center;max-width:600px;margin:0 auto 28px;font-size:15px}
+.demo-sec{padding:50px 0;text-align:center;border-top:1px solid #1d1d2e}
+.demo-sec h2{font-size:28px;margin:0 0 8px}
+.demo-box{max-width:580px;margin:0 auto;background:#15151f;border:1px solid #23233a;border-radius:16px;padding:28px}
+.demo-box textarea{width:100%;background:#0b0b12;border:1px solid #2a2a3e;border-radius:10px;color:#e7e7ef;font-size:15px;padding:14px;resize:vertical;min-height:56px;font-family:inherit}
 .demo-box textarea:focus{outline:none;border-color:#8a7dff}
-.demo-box .demo-btn{margin-top:16px;width:100%;padding:16px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff;transition:opacity .2s}
+.demo-box .demo-btn{margin-top:14px;width:100%;padding:14px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff;transition:opacity .2s}
 .demo-box .demo-btn:hover{opacity:.9}
 .demo-box .demo-btn:disabled{opacity:.5;cursor:not-allowed}
-.demo-result{margin-top:24px;text-align:left;display:none}
-.demo-result h4{font-size:14px;color:#8a7dff;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.demo-result{margin-top:20px;text-align:left;display:none}
+.demo-result h4{font-size:13px;color:#8a7dff;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
 .demo-result ul{list-style:none;padding:0}
-.demo-result li{background:#0b0b12;border:1px solid #2a2a3e;border-radius:8px;padding:12px 16px;margin-bottom:8px;color:#e7e7ef;font-size:14px}
-.demo-result .group{margin-bottom:20px}
-.demo-cta{margin-top:24px;text-align:center}
-.demo-cta a{display:inline-block;padding:14px 32px;background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff;border-radius:999px;text-decoration:none;font-weight:600}
-footer{padding:40px 0;text-align:center;color:#70708a;font-size:13px;border-top:1px solid #1d1d2e;margin-top:40px}
+.demo-result li{background:#0b0b12;border:1px solid #2a2a3e;border-radius:8px;padding:10px 14px;margin-bottom:6px;color:#e7e7ef;font-size:14px}
+.demo-result .group{margin-bottom:16px}
+.demo-cta{margin-top:20px;text-align:center;padding:20px;background:#12121c;border-radius:12px;border:1px solid #8a7dff}
+.demo-cta p{margin-bottom:10px;font-size:15px}
+.demo-cta a{display:inline-block;padding:12px 28px;background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff;border-radius:999px;text-decoration:none;font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:650px;margin:0 auto}
+.step{background:#12121c;border-radius:12px;padding:20px;border:1px solid #23233a;text-align:center}
+.step .num{color:#8a7dff;font-weight:700;font-size:24px;margin-bottom:4px}
+.step h3{font-size:15px;margin-bottom:4px}
+.step p{color:#a0a0b5;font-size:13px}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:600px;margin:0 auto}
+.price-card{background:#15151f;border:1px solid #23233a;border-radius:16px;padding:28px;text-align:center}
+.price-card.featured{border-color:#8a7dff}
+.price-card h3{font-size:18px;margin-bottom:6px}
+.price-card .amount{font-size:36px;font-weight:800;margin:10px 0}
+.price-card .amount span{font-size:14px;font-weight:400;color:#a0a0b5}
+.price-card ul{list-style:none;padding:0;margin:14px 0 20px;text-align:left}
+.price-card li{padding:5px 0;font-size:14px;color:#b6b6c8}
+.price-card li:before{content:'\2713 ';color:#8a7dff}
+.price-card .btn{display:block;padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;text-align:center}
+.btn-outline{border:1px solid #3a3a4e;color:#e7e7ef}
+.btn-primary{background:linear-gradient(90deg,#8a7dff,#ff7db6);color:#fff}
+footer{padding:30px 0;text-align:center;color:#70708a;font-size:13px;border-top:1px solid #1d1d2e;margin-top:30px}
 footer a{color:#a0a0b5;margin:0 8px}
-@media(max-width:640px){.hero h1{font-size:36px}nav a{margin-left:12px;font-size:13px}.lang-switch a{padding:4px 10px;font-size:12px}}
+@media(max-width:640px){.hero h1{font-size:32px}.steps,.pricing-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="c">
-<div class="logo">AikitPros</div>
-<nav>
-<a href="#features">Features</a>
-<a href="#demo">Try it</a>
-<a href="#how">How it works</a>
-<a href="/chatgpt/conversations">Launch App</a>
-<div class="lang-switch">
-<a href="/landing.html" class="active">EN</a>
-<a href="/landing-zh.html">中文</a>
-</div>
-</nav>
+  <div class="logo">AikitPros</div>
+  <nav>
+    <a href="#demo">Try Free</a>
+    <a href="#pricing">Pricing</a>
+    <div class="lang-switch"><a href="/landing.html" class="active">EN</a><a href="/landing-zh.html">ZH</a></div>
+  </nav>
 </header>
+<main>
+  <section class="hero">
+    <h1>AI ad copy.<br><span>30 seconds. Free.</span></h1>
+    <p>Paste your product brief, get 3 headlines + 3 hooks + 3 CTAs instantly. Powered by GPT-4o. No signup to try.</p>
+    <a class="cta" href="#demo">Try it now &mdash; Free &darr;</a>
+    <p class="trust">Powered by <b>Ace Data Cloud</b> &middot; Pay-as-you-go credits</p>
+  </section>
 
-<section class="hero">
-<h1>One brief. <span>A full ad campaign.</span></h1>
-<p>AikitPros turns a single product brief into ready-to-ship ad creatives - copy, images, video, and music - generated by frontier AI models, in one workspace.</p>
-<a class="cta" href="#demo">Try it free ↓</a>
-<a class="cta s" href="/demo.html">Watch demo</a>
-</section>
-
-<section id="demo" class="demo-sec">
-<div class="c">
-<h2>Try AI Ad Copy — Free</h2>
-<p class="sub">Paste your product info, get professional ad copy in ~30 seconds. No signup needed.</p>
-<div class="demo-box">
-<textarea id="demo-headline" placeholder="Product name, e.g.: ANC Pro Max Headphones" rows="1"></textarea>
-<textarea id="demo-body" placeholder="Product description, e.g.: Latest ANC 3.0 chip, 40h battery, Bluetooth 5.4, spatial audio. Perfect for professionals and music lovers." style="margin-top:12px" rows="3"></textarea>
-<button class="demo-btn" id="demo-run" onclick="runDemo()">Generate Ad Copy</button>
-<div class="demo-result" id="demo-result">
-<div class="group" id="res-headlines"></div>
-<div class="group" id="res-hooks"></div>
-<div class="group" id="res-ctas"></div>
-<div class="demo-cta"><a href="/chatgpt/conversations">Like it? Launch full Campaign (images + video + music) →</a></div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="features" class="c">
-<div class="f">
-<div class="card"><h3>AI Copywriter</h3><p>GPT-class models draft headlines, taglines, and long-form ad copy tailored to your brand voice.</p></div>
-<div class="card"><h3>Image Studio</h3><p>Generate on-brand product shots, hero banners, and social creatives in seconds.</p></div>
-<div class="card"><h3>Video Generator</h3><p>Turn scripts into short-form ads with Sora-class video models - no editing skills required.</p></div>
-<div class="card"><h3>Music and Voiceover</h3><p>Royalty-free AI music and voice tracks that match the mood of your campaign.</p></div>
-</div>
-</section>
-
-<section id="how" class="sec">
-<div class="c">
-<h2>From brief to campaign in 4 steps</h2>
-<p class="sub">Skip the agency. Skip the handoffs. Ship a full campaign before lunch.</p>
-<div class="steps">
-<div class="step"><div class="num">01</div><h3>Drop your brief</h3><p>Paste your product description, audience, and goal.</p></div>
-<div class="step"><div class="num">02</div><h3>Pick your channels</h3><p>Instagram, TikTok, YouTube, Google - adapted automatically.</p></div>
-<div class="step"><div class="num">03</div><h3>Generate assets</h3><p>Copy, images, video, and soundtrack - produced in parallel.</p></div>
-<div class="step"><div class="num">04</div><h3>Export and launch</h3><p>Download ready-to-publish files or push to your ad accounts.</p></div>
-</div>
-</div>
-</section>
-
-
-    <section id="pricing" class="sec">
+  <section id="demo" class="demo-sec">
     <div class="c">
-      <h2>Simple, transparent pricing</h2>
-      <p class="sub">Start free. Upgrade when you're ready to scale.</p>
-      <div class="f" style="max-width:700px;margin:0 auto;gap:24px">
-        <div class="card" style="flex:1;text-align:center;padding:32px">
-          <h3 style="color:#8a7dff">Free</h3>
-          <p style="font-size:36px;font-weight:800;margin:16px 0">$0</p>
-          <p style="margin-bottom:24px">3 campaigns/day<br>Ad copy generation<br>No signup needed</p>
-          <a class="cta s" href="#try" style="display:block;text-align:center">Try it now</a>
-        </div>
-        <div class="card" style="flex:1;text-align:center;padding:32px;border-color:#8a7dff">
-          <h3 style="color:#ff7db6">Pro</h3>
-          <p style="font-size:36px;font-weight:800;margin:16px 0">$9<span style="font-size:16px;font-weight:400">/mo</span></p>
-          <p style="margin-bottom:24px">Unlimited campaigns<br>Images + Video + Music<br>Priority generation<br>Export & publish</p>
-          <a class="cta" href="/chatgpt/conversations" style="display:block;text-align:center">Get Pro access</a>
+      <h2>Generate Ad Copy Now</h2>
+      <p class="sub">Enter product info. Results in ~30 seconds.</p>
+      <div class="demo-box">
+        <textarea id="demo-headline" rows="2" placeholder="Product name, e.g.: Smart Water Bottle"></textarea>
+        <textarea id="demo-body" rows="3" placeholder="Key features, e.g.: Temperature tracking, hydration reminders" style="margin-top:10px"></textarea>
+        <button class="demo-btn" id="demo-run" onclick="runDemo()">Generate Ad Copy &mdash; Free</button>
+        <div id="demo-result" class="demo-result">
+          <div class="group" id="res-headlines"></div>
+          <div class="group" id="res-hooks"></div>
+          <div class="group" id="res-ctas"></div>
+          <div class="demo-cta">
+            <p><b>Want more?</b> Sign up &amp; buy credits. Only <b>$0.10 per generation</b>.</p>
+            <a href="/chatgpt/conversations">Buy Credits &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-<section class="sec" style="text-align:center">
-<div class="c">
-<h2>Ready to ship your next campaign?</h2>
-<p class="sub">Join creators and founders using AikitPros to replace their entire creative stack.</p>
-<a class="cta" href="/chatgpt/conversations">Get started free</a>
-</div>
-</section>
 
+  <section id="how" class="sec">
+    <div class="c">
+      <h2>How it works</h2>
+      <p class="sub">Three steps. Under a minute.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Paste your brief</h3><p>Product name + features</p></div>
+        <div class="step"><div class="num">2</div><h3>AI generates copy</h3><p>Headlines, hooks, CTAs</p></div>
+        <div class="step"><div class="num">3</div><h3>Copy &amp; launch</h3><p>Use in your ads now</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="sec">
+    <div class="c">
+      <h2>Simple pricing</h2>
+      <p class="sub">Try free. Buy credits when you need more.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Free Demo</h3>
+          <div class="amount">$0</div>
+          <ul>
+            <li>1 free generation</li>
+            <li>No signup needed</li>
+            <li>Full ad copy output</li>
+          </ul>
+          <a class="btn btn-outline" href="#demo">Try demo</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Pay-as-you-go</h3>
+          <div class="amount">$0.10<span>/credit</span></div>
+          <ul>
+            <li>1 credit = 1 full generation</li>
+            <li>Buy 10, 50, or 100 credits</li>
+            <li>Never expires</li>
+            <li>Signup + email required</li>
+          </ul>
+          <a class="btn btn-primary" href="/chatgpt/conversations">Buy Credits</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 <footer>
-<div class="c">&copy; 2026 AikitPros - <a href="/chatgpt/conversations">App</a> - <a href="https://x.com/aikitpros" target="_blank">X</a> - <a href="https://medium.com/@yujunjie1983" target="_blank">Blog</a></div>
+  <p>&copy; 2026 AikitPros &middot; Powered by <a href="https://acedatacloud.com" target="_blank">Ace Data Cloud</a> &middot; <a href="https://x.com/aikitpros">X</a> &middot; <a href="https://medium.com/@yujunjie1983">Blog</a></p>
 </footer>
-
 <script>
 async function runDemo(){
   var btn=document.getElementById('demo-run');
@@ -173,7 +171,7 @@ async function runDemo(){
     render('res-ctas','Call to Action',d.ctas);
     document.getElementById('demo-result').style.display='block';
   }catch(e){alert('Generation failed: '+e.message);}
-  btn.disabled=false;btn.textContent='Generate Ad Copy';
+  btn.disabled=false;btn.textContent='Generate Ad Copy \u2014 Free';
 }
 </script>
 </body>
