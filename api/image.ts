@@ -27,12 +27,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
     const data = await response.json();
 
-    // Always return 200 with Ace data + debug info
-    return res.status(200).json({
-      _ace_status: response.status,
-      _ace_ok: response.ok,
-      ...data
-    });
+    // Sync result with images
+    if (data.data && data.data.length > 0) {
+      return res.status(200).json({ success: true, images: data.data });
+    }
+
+    // Async task - return task_id for frontend display
+    if (data.task_id || data.id) {
+      return res.status(200).json({ task_id: data.task_id || data.id, status: 'processing' });
+    }
+
+    // Pass through any other response
+    return res.status(200).json(data);
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal server error' });
   }
