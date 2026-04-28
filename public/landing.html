@@ -91,7 +91,7 @@ footer a{color:#a0a0b5;margin:0 8px}
 <section class="hero">
 <h1>One brief in. <span>A full ad campaign out.</span></h1>
 <p>Paste your product brief, get 3 ad headlines + 3 hooks + 3 CTAs in 30 seconds. Built on Ace Data Cloud (Nexior + Dify). Free demo, no signup to try.</p>
-<a class="cta" href="#demo">Try the free demo</a>
+<a class="cta" href="#demo">Generate ad copy now →</a>
 <a class="cta-secondary" href="#how-billing">How billing works</a>
 <div class="trust">Powered by <b>Ace Data Cloud</b> - Pay only for what you generate</div>
 </section>
@@ -154,5 +154,5 @@ footer a{color:#a0a0b5;margin:0 8px}
 <script>
 async function runDemo(){var btn=document.getElementById('demo-run');var h=document.getElementById('demo-headline').value.trim();var b=document.getElementById('demo-body').value.trim();if(!h&&!b){alert('Please enter a product name or description');return;}btn.disabled=true;btn.textContent='Generating...';document.getElementById('demo-result').style.display='none';try{var res=await fetch('/api/optimize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({headline:h||'Product',body:b||h,mode:'copy'})});var d=await res.json();if(!res.ok)throw new Error(d.error||'Request failed');function render(id,title,arr){var el=document.getElementById(id);if(!arr||!arr.length){el.innerHTML='';return;}el.innerHTML='<h4>'+title+'</h4><ul>'+arr.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';}render('res-headlines','Ad Headlines',d.headlines);render('res-hooks','Opening Hooks',d.hooks);render('res-ctas','Call to Action',d.ctas);document.getElementById('demo-result').style.display='block';}catch(e){alert('Generation failed: '+e.message);}btn.disabled=false;btn.textContent='Generate ad copy - Free';}
 </script>
-</body>
+<script>(function(){try{var p=new URLSearchParams(location.search);if(p.get('remix')==='demo'){var h=document.getElementById('demo-headline'),b=document.getElementById('demo-body');if(h&&!h.value){h.value='AeroGlide Pro Running Shoes by VeloStep Athletics';}if(b&&!b.value){b.value='Target: Urban runners, 25-40, fitness-conscious. Tone: Energetic, aspirational, modern. Goal: Summer product launch awareness. Channels: Instagram, Facebook, Google Ads, TikTok. Features: adaptive foam, breathable knit upper, ultra-lightweight.';}var bn=document.createElement('div');bn.style.cssText='background:linear-gradient(135deg,#7c3aed,#ec4899);color:#fff;padding:10px;text-align:center;font-size:14px;border-radius:8px;margin:10px 0';bn.innerHTML='✨ Brief from demo loaded — edit it for your product, then click Generate.';var box=document.querySelector('.demo-box');if(box&&!document.getElementById('remix-banner')){bn.id='remix-banner';box.insertBefore(bn,box.firstChild);}var t=document.getElementById('generate')||document.querySelector('.demo-sec');if(t)t.scrollIntoView({behavior:'smooth'});}}catch(e){}})();</script></body>
 </html>
