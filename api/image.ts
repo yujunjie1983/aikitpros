@@ -26,19 +26,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       body: JSON.stringify({ action: 'generate', prompt, size, model }),
     });
     const data = await response.json();
-        if (!response.ok && !data.id && !(data.data && data.data.length > 0)) return res.status(response.status).json(data);
 
-    // Sync result
-    if (data.data && data.data.length > 0) {
-      return res.status(200).json({ success: true, images: data.data });
-    }
-
-    // Async task - return task_id for client-side polling
-    if (data.id) {
-      return res.status(200).json({ task_id: data.id, status: 'processing' });
-    }
-
-    return res.status(200).json(data);
+    // Always return 200 with Ace data + debug info
+    return res.status(200).json({
+      _ace_status: response.status,
+      _ace_ok: response.ok,
+      ...data
+    });
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal server error' });
   }
