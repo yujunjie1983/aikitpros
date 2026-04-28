@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AikitPros — AI 广告文案生成器</title>
 <meta name="description" content="30秒生成专业广告标题、开场钩子、行动号召。免费试用，无需注册。按需充值。">
-  <meta name="keywords" content="AI广告文案,广告生成器,GPT-4o,标题生成,营销文案,Ace Data Cloud,AikitPros">
+  <meta name="keywords" content="AI广告文案生成,跨境广告,独立站广告,TikTok Shop文案,小红书广告,Facebook广告,AI广告 Studio,Ace Data Cloud,Nexior,Dify,AikitPros">
 <meta name="author" content="AikitPros">
 <link rel="canonical" href="https://aikitpros.com/landing-zh.html">
 <link rel="alternate" hreflang="en" href="https://aikitpros.com/landing.html">
@@ -173,7 +173,7 @@ async function runDemo(){
   btn.disabled=true;btn.textContent='生成中...';
   document.getElementById('demo-result').style.display='none';
   try{
-    var res=await fetch('/api/optimize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({headline:h||'产品',body:b||h,mode:'copy'})});
+    var res=await fetch('/api/optimize?lang=zh',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({headline:h||'产品',body:b||h,mode:'copy'})});
     var d=await res.json();
     if(!res.ok)throw new Error(d.error||'请求失败');
     function render(id,title,arr){
