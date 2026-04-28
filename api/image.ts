@@ -26,7 +26,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       body: JSON.stringify({ action: 'generate', prompt, size, model }),
     });
     const data = await response.json();
-    if (!response.ok) return res.status(response.status).json(data);
+        if (!response.ok && !data.id && !(data.data && data.data.length > 0)) return res.status(response.status).json(data);
 
     // Sync result
     if (data.data && data.data.length > 0) {
