@@ -29,7 +29,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
     const data = await response.json();
     if (!response.ok) return res.status(response.status).json(data);
-    return res.status(200).json(data);
+
+    // Transform Ace API format { items: [{ id, response: { data } }] }
+    // to frontend expected format [{ id, data }]
+    const items = data.items || [];
+    const transformed = items.map((item: any) => ({
+      id: item.id,
+      data: item.response?.data || [],
+      status: item.response?.success ? 'completed' : 'processing',
+    }));
+
+    return res.status(200).json(transformed);
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal server error' });
   }
