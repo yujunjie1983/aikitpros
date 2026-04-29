@@ -2,9 +2,9 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const ACE_API = 'https://api.acedata.cloud/flux/images';
 
-function getFallbackUrl(prompt: string): string {
-  const keywords = encodeURIComponent(prompt.split(' ').slice(0, 3).join(' '));
-  return `https://source.unsplash.com/1024x1024/?${keywords}`;
+function getFallbackUrl(prompt: string, index: number = 0): string {
+  const seed = Math.abs(prompt.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) + index;
+  return `https://picsum.photos/seed/${seed}/1024/1024`;
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -41,12 +41,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     clearTimeout(timeout);
     const data = await response.json();
 
-    // Sync result with images
     if (data.data && data.data.length > 0) {
       return res.status(200).json({ success: true, images: data.data });
     }
 
-    // Async task - return fallback immediately
     return res.status(200).json({
       success: true,
       images: [{ image_url: getFallbackUrl(prompt), fallback: true }]
