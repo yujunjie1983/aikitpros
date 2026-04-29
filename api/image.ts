@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 const ACE_API = 'https://api.acedata.cloud/flux/images';
 const ACE_TASKS_API = 'https://api.acedata.cloud/flux/tasks';
 
-async function pollTask(taskId: string, token: string, maxWait = 25000): Promise<any> {
+async function pollTask(taskId: string, token: string, maxWait = 7000): Promise<any> {
   const start = Date.now();
   while (Date.now() - start < maxWait) {
     await new Promise(r => setTimeout(r, 3000));
