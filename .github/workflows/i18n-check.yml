@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm i -g cheerio@1.0.0
+      - run: npm i cheerio@1.0.0
       - name: Compare EN/ZH DOM structure
         run: |
           node <<'EOF'
