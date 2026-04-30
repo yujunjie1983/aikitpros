@@ -61,4 +61,4 @@ footer{padding:32px 0;text-align:center;color:#94a3b8;font-size:13px;border-top:
 <script>
 (function(){var cm=document.getElementById('cm'),vl=document.getElementById('vl'),comp=document.getElementById('comp');function calc(){var c=+cm.value,v=+vl.value,cp=+comp.value;document.getElementById('cm-out').textContent=c;document.getElementById('vl-out').textContent=v+'s';var our=(c*0.35*(v/8)).toFixed(2),cmp=(c*cp*(v/8)).toFixed(2),sv=(cmp-our).toFixed(2),an=Math.round(sv*12);document.getElementById('our-cost').textContent='$'+our;document.getElementById('comp-cost').textContent='$'+cmp;document.getElementById('saved').textContent='$'+sv;document.getElementById('annual').textContent='$'+an.toLocaleString()}cm.addEventListener('input',calc);vl.addEventListener('input',calc);comp.addEventListener('change',calc);calc()})();
 </script>
-</body></html>
+<script src="/i18n.js" defer></script></body></html>
