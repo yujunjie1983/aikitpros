@@ -1,0 +1,52 @@
+name: i18n consistency check
+
+on:
+  pull_request:
+    paths:
+      - 'public/landing.html'
+      - 'public/landing-zh.html'
+      - '.github/workflows/i18n-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'public/landing.html'
+      - 'public/landing-zh.html'
+
+jobs:
+  diff-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm i -g cheerio@1.0.0
+      - name: Compare EN/ZH DOM structure
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const { load } = require('cheerio');
+          const en = load(fs.readFileSync('public/landing.html','utf8'));
+          const zh = load(fs.readFileSync('public/landing-zh.html','utf8'));
+          const checks = [
+            ['h1 count', en('h1').length, zh('h1').length],
+            ['hero p count', en('.hero p, section.hero p').length, zh('.hero p, section.hero p').length],
+            ['cta count', en('a.cta').length, zh('a.cta').length],
+            ['nav links', en('header nav a').length, zh('header nav a').length],
+            ['meta description', en('meta[name=description]').length, zh('meta[name=description]').length],
+            ['og:description', en('meta[property="og:description"]').length, zh('meta[property="og:description"]').length],
+            ['twitter:description', en('meta[name="twitter:description"]').length, zh('meta[name="twitter:description"]').length],
+            ['hreflang links', en('link[hreflang]').length, zh('link[hreflang]').length],
+            ['JSON-LD blocks', en('script[type="application/ld+json"]').length, zh('script[type="application/ld+json"]').length],
+          ];
+          let fail = false;
+          for (const [k, a, b] of checks) {
+            const ok = a === b;
+            console.log(`${ok ? 'PASS' : 'FAIL'}  ${k}: EN=${a} ZH=${b}`);
+            if (!ok) fail = true;
+          }
+          // Also flag broken span: ensure h1 contains a span
+          if (!zh('h1 span').length) { console.log('FAIL  zh h1 missing <span>'); fail = true; }
+          if (!en('h1 span').length) { console.log('FAIL  en h1 missing <span>'); fail = true; }
+          process.exit(fail ? 1 : 0);
+          EOF
