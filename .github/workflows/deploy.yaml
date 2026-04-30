@@ -1,17 +1,10 @@
 name: deploy
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - '.github/ISSUE_TEMPLATE/**'
+    workflow_dispatch:
 permissions:
   contents: write
 jobs:
   run:
-    if: ${{ secrets.KUBECONFIG != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Generate Build Number
