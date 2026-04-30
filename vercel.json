@@ -4,6 +4,9 @@
   "redirects": [
     { "source": "/", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false },
     { "source": "/landing.html", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false },
+        { "source": "/pricing.html", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false },
+    { "source": "/demo.html", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false },
+    { "source": "/competition.html", "has": [{ "type": "host", "value": "(www\\.)?aikitpros\\.cn" }], "destination": "/landing-zh.html", "permanent": false },
     { "source": "/", "destination": "/landing.html", "permanent": false }
   ],
   "rewrites": [
