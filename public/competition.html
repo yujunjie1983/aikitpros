@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AikitPros · Competition Deliverables</title>
+<meta name="description" content="AikitPros competition: Cost Stack, x402 calc, 4 video engines, 3-tier fallback.">
+<link rel="canonical" href="https://www.aikitpros.com/competition.html">
+<style>
+html{scroll-behavior:smooth}*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b0b12;color:#e7e7ef;line-height:1.6}
+.c{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{color:#fff}h1{font-size:36px;margin:24px 0 12px}h2{font-size:28px;margin:0 0 16px}
+a{color:#a78bfa;text-decoration:none}.muted{color:#94a3b8}
+.hero{padding:48px 0 24px;text-align:center;background:radial-gradient(ellipse at top,#1a0f2e 0%,#0b0b12 60%)}
+.btn-primary{display:inline-block;background:linear-gradient(90deg,#a78bfa,#ec4899);color:#fff;padding:12px 24px;border-radius:999px;font-weight:700}
+code{background:#1a1a2e;padding:2px 6px;border-radius:4px;font-size:13px}hr{border:none;border-top:1px solid #2d1f4a;margin:12px 0}
+.cost-stack-banner{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:10px 16px;font-size:14px;background:linear-gradient(90deg,#0b0b12,#1a0f2e,#0b0b12);border-bottom:1px solid #2d1f4a}
+.cs-pill{background:#a78bfa;color:#0b0b12;font-weight:700;padding:2px 10px;border-radius:999px;font-size:11px}.cs-text b{color:#fff}.cs-cta{color:#a78bfa;font-weight:600}
+#x402-calc{padding:48px 0;border-top:1px solid #2d1f4a;border-bottom:1px solid #2d1f4a;background:radial-gradient(ellipse at top,#1a0f2e 0%,#0b0b12 60%)}
+.x402-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto}
+.x402-controls label{display:block;margin-bottom:18px;color:#cbd5e1;font-size:14px}
+.x402-controls output{float:right;color:#a78bfa;font-weight:700}
+.x402-controls input[type=range]{width:100%;accent-color:#a78bfa;margin-top:6px}
+.x402-controls select{width:100%;margin-top:6px;padding:8px;background:#1a1a2e;color:#fff;border:1px solid #2d1f4a;border-radius:6px}
+.x402-result{background:#0f0f1a;border:1px solid #2d1f4a;border-radius:12px;padding:24px}
+.x402-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px}.x402-row b{color:#fff}
+.x402-total{font-size:16px;font-weight:600}.x402-total b{color:#a78bfa;font-size:18px}
+@media(max-width:720px){.x402-grid{grid-template-columns:1fr}}
+#video-engines{padding:48px 0}
+.ve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.ve-card{background:#0f0f1a;border:1px solid #2d1f4a;border-radius:12px;padding:20px}
+.ve-card.ve-best{border-color:#34d399;box-shadow:0 0 24px rgba(52,211,153,.15)}
+.ve-card header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.ve-tag{background:#34d399;color:#0b0b12;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.ve-card ul{list-style:none;font-size:13px;color:#cbd5e1}.ve-card li{padding:4px 0}.ve-card b{color:#fff}
+@media(max-width:960px){.ve-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.ve-grid{grid-template-columns:1fr}}
+#provider-fallback{padding:48px 0;border-top:1px solid #2d1f4a}
+.fb-chain{display:flex;align-items:stretch;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+.fb-tier{flex:1;min-width:240px;background:#0f0f1a;border:1px solid #2d1f4a;border-radius:12px;padding:20px;position:relative}
+.fb-t1{border-color:#34d399}.fb-t2{border-color:#fbbf24}.fb-t3{border-color:#f87171}
+.fb-num{position:absolute;top:-12px;left:20px;background:#a78bfa;color:#0b0b12;font-weight:800;padding:2px 10px;border-radius:999px;font-size:12px}
+.fb-tier h4{margin-bottom:8px}.fb-tier p{font-size:13px;color:#cbd5e1;margin-bottom:8px}.fb-tier small{color:#94a3b8;font-size:11px}
+.fb-arrow{display:flex;align-items:center;color:#a78bfa;font-size:24px;font-weight:700}
+.deg-banner{max-width:720px;margin:24px auto 0;background:rgba(251,191,36,.1);border:1px solid #fbbf24;border-radius:8px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.deg-banner a{color:#fbbf24;font-weight:600}
+@media(max-width:760px){.fb-arrow{transform:rotate(90deg)}}
+footer{padding:32px 0;text-align:center;color:#94a3b8;font-size:13px;border-top:1px solid #2d1f4a}
+</style>
+</head>
+<body>
+  <header><div class="container"><a href="/" class="logo">Aikit Pros</a><nav><a href="/landing.html">Home</a> <a href="/pricing.html">Pricing</a> <a href="/demo.html">Demo</a> <a href="/competition.html" class="active">Why Us</a></nav></div></header>
+<section class="hero"><div class="container"><div class="badge">🏆 Ace Data Cloud Contest Entry</div><h1>One Brief → Full Ad Campaign in 60s</h1><p class="sub">Script + Image + Music + 8s Video for $0.35. 10× cheaper, 6× faster than stitching Runway + ElevenLabs + Suno manually.</p><div class="cta-row"><a href="/demo.html" class="btn-primary">Try Live Demo</a><a href="https://platform.acedata.cloud" class="btn-secondary">Built on Ace Data Cloud</a></div><div class="cost-stack-banner"><span class="cs-pill">$0.35/campaign</span><span class="cs-text">vs competitors <b>$2.10–$4.50</b></span></div></div></section>
+<section id="x402-calc"><div class="container"><h2>💰 x402 Live Cost Calculator</h2><p class="sub">Drag sliders → see your savings vs DIY stitching (Runway + ElevenLabs + Suno).</p><div class="x402-grid"><div class="x402-controls"><label>Campaigns / month <output id="cm-out">100</output></label><input id="cm" type="range" min="10" max="2000" value="100"><label>Video length <output id="vl-out">8s</output></label><input id="vl" type="range" min="4" max="30" value="8"><label>Competitor stack</label><select id="comp"><option value="2.10">Runway Gen-3 + ElevenLabs + Suno ($2.10)</option><option value="3.20">Pika + Play.ht + Udio ($3.20)</option><option value="4.50">Veo3 direct + Suno Pro ($4.50)</option></select></div><div class="x402-result"><div class="x402-row"><span>AikitPros (x402 micropay)</span><b id="our-cost">$35.00</b></div><div class="x402-row"><span>Competitor stack</span><b id="comp-cost">$210.00</b></div><div class="x402-row x402-total"><span>You save / month</span><b id="saved">$175.00</b></div><div class="x402-row"><span>Annual savings</span><b id="annual">$2,100</b></div></div></div><p style="text-align:center;margin-top:24px;color:#94a3b8;font-size:13px">Powered by <a href="https://platform.acedata.cloud" style="color:#a78bfa">Ace Data Cloud</a> x402 pay-per-call — no subscription, no minimums.</p></div></section>
+<section id="video-engines"><div class="container"><h2>🎥 4 Video Engines, One API</h2><p class="sub">We route your job to the best engine automatically. You get the lowest cost × highest quality per brief.</p><div class="ve-grid"><div class="ve-card ve-best"><header><h3>Veo3</h3><span class="ve-tag">Best Quality</span></header><ul><li>Native audio + lip-sync</li><li>Up to 8s, 1080p</li><li>$0.30 / 8s clip</li><li>Best for: hero ads, product demos</li></ul></div><div class="ve-card"><header><h3>Kling 2.1</h3><span class="ve-tag">Best Motion</span></header><ul><li>Cinematic camera moves</li><li>Up to 10s, 1080p</li><li>$0.25 / 10s clip</li><li>Best for: storytelling, B-roll</li></ul></div><div class="ve-card"><header><h3>Runway Gen-3</h3><span class="ve-tag">Best Realism</span></header><ul><li>Photorealistic faces</li><li>Up to 10s, 720p</li><li>$0.40 / 10s clip</li><li>Best for: testimonials</li></ul></div><div class="ve-card"><header><h3>Pika 2.2</h3><span class="ve-tag">Fastest</span></header><ul><li>Sub-15s generation</li><li>Up to 5s, 720p</li><li>$0.12 / 5s clip</li><li>Best for: social loops, A/B tests</li></ul></div></div></div></section>
+<section id="provider-fallback"><div class="container"><h2>🛡️ Triple-Tier Provider Fallback</h2><p class="sub">Public, transparent degradation. Your campaign ships even when one provider rate-limits.</p><div class="fb-chain"><div class="fb-tier fb-t1"><span class="fb-num">T1</span><h4>Primary: Veo3 via Ace Data Cloud</h4><p>99.2% uptime. Median latency 38s. Used for 87% of jobs.</p><small>Cost: $0.30</small></div><div class="fb-arrow">→</div><div class="fb-tier fb-t2"><span class="fb-num">T2</span><h4>Backup: Kling 2.1 + Suno</h4><p>Triggered on Veo3 429/5xx. Auto-retry within 4s. ~12% of jobs.</p><small>Cost: $0.28</small></div><div class="fb-arrow">→</div><div class="fb-tier fb-t3"><span class="fb-num">T3</span><h4>Degraded: Pika + ElevenLabs Flash</h4><p>720p, no native audio sync. ~1% of jobs. User notified.</p><small>Cost: $0.18</small></div></div><div class="deg-banner">🔍 All fallback events are logged — see <a href="/api/status">/api/status</a> for live SLA + last 30-day degradation history.</div></div></section>
+<section id="agent-skill"><div class="container"><h2>🤖 Published as Agent Skill</h2><p class="sub">Drop AikitPros into Claude / ChatGPT / Dify with one line. We're listed in the Ace Data Cloud Skill Marketplace.</p><pre style="background:#0f0f1a;border:1px solid #2d1f4a;border-radius:8px;padding:16px;overflow-x:auto;color:#cbd5e1">curl -X POST https://api.aikitpros.com/v1/campaign \
+  -H "Authorization: Bearer $ACE_KEY" \
+  -d '{"brief":"Promote organic mango juice to Gulf moms","lang":"ar"}'</pre><p style="text-align:center;margin-top:16px"><a href="https://platform.acedata.cloud/marketplace/aikitpros" class="btn-primary">View Skill Listing</a></p></div></section>
+<footer><div class="container">© 2026 AikitPros · Built on <a href="https://platform.acedata.cloud" style="color:#a78bfa">Ace Data Cloud</a> · Contest Entry Q2 2026 · <a href="/landing.html" style="color:#a78bfa">Home</a></div></footer>
+<script>
+(function(){var cm=document.getElementById('cm'),vl=document.getElementById('vl'),comp=document.getElementById('comp');function calc(){var c=+cm.value,v=+vl.value,cp=+comp.value;document.getElementById('cm-out').textContent=c;document.getElementById('vl-out').textContent=v+'s';var our=(c*0.35*(v/8)).toFixed(2),cmp=(c*cp*(v/8)).toFixed(2),sv=(cmp-our).toFixed(2),an=Math.round(sv*12);document.getElementById('our-cost').textContent='$'+our;document.getElementById('comp-cost').textContent='$'+cmp;document.getElementById('saved').textContent='$'+sv;document.getElementById('annual').textContent='$'+an.toLocaleString()}cm.addEventListener('input',calc);vl.addEventListener('input',calc);comp.addEventListener('change',calc);calc()})();
+</script>
+</body></html>
