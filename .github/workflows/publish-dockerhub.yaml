@@ -1,20 +1,11 @@
 name: Publish to Docker Hub
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - CHANGELOG.md
-      - CHANGELOG.json
-      - '.github/ISSUE_TEMPLATE/**'
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   publish-dockerhub:
     name: Publish to Docker Hub
-    if: ${{ secrets.DOCKERHUB_USERNAME != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
