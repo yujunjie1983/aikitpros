@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AikitPros · Dify Workflow Integration</title>
+<meta name="description" content="Drop AikitPros into Dify as a one-node workflow. Brief in → full ad campaign (script + image + music + 8s video) out in 60s for $0.35.">
+<link rel="canonical" href="https://www.aikitpros.com/dify-workflow.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.aikitpros.com/dify-workflow.html">
+<meta property="og:title" content="AikitPros × Dify — One-Node Ad Campaign Workflow">
+<meta property="og:description" content="Import our DSL, plug in your Ace Data Cloud key, ship campaigns from Dify in 60s.">
+<style>
+html{scroll-behavior:smooth}*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b0b12;color:#e7e7ef;line-height:1.6}
+.c{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{color:#fff}h1{font-size:36px;margin:24px 0 12px}h2{font-size:28px;margin:0 0 16px}h3{font-size:18px;margin:0 0 8px}
+a{color:#a78bfa;text-decoration:none}.muted{color:#94a3b8}
+nav{padding:16px 0;border-bottom:1px solid #2d1f4a}
+nav .c{display:flex;justify-content:space-between;align-items:center}
+nav a{margin-left:16px;color:#cbd5e1}
+.hero{padding:48px 0 32px;text-align:center;background:radial-gradient(ellipse at top,#1a0f2e 0%,#0b0b12 60%)}
+.hero p{max-width:720px;margin:12px auto 24px;color:#cbd5e1}
+.btn-primary{display:inline-block;background:linear-gradient(90deg,#a78bfa,#ec4899);color:#fff;padding:12px 24px;border-radius:999px;font-weight:700;margin:4px}
+.btn-secondary{display:inline-block;background:#1a1a2e;border:1px solid #2d1f4a;color:#e7e7ef;padding:12px 24px;border-radius:999px;font-weight:600;margin:4px}
+code,pre{background:#1a1a2e;border:1px solid #2d1f4a;border-radius:6px;font-size:13px;color:#e7e7ef;font-family:'SF Mono',Menlo,monospace}
+code{padding:2px 6px}
+pre{padding:16px;overflow-x:auto;margin:12px 0;text-align:left}
+section{padding:48px 0;border-top:1px solid #2d1f4a}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.step{background:#0f0f1a;border:1px solid #2d1f4a;border-radius:12px;padding:20px;position:relative}
+.step .num{position:absolute;top:-12px;left:20px;background:#a78bfa;color:#0b0b12;font-weight:800;padding:2px 10px;border-radius:999px;font-size:12px}
+.step p{font-size:13px;color:#cbd5e1;margin-top:6px}
+@media(max-width:960px){.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.nodes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.node{background:#0f0f1a;border:1px solid #2d1f4a;border-radius:12px;padding:20px}
+.node b{color:#fff}
+.node .tag{display:inline-block;background:#a78bfa;color:#0b0b12;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:8px}
+@media(max-width:760px){.nodes{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+th,td{padding:10px 12px;border-bottom:1px solid #2d1f4a;text-align:left}
+th{color:#a78bfa;font-weight:700}
+footer{padding:32px 0;text-align:center;color:#94a3b8;font-size:13px;border-top:1px solid #2d1f4a}
+</style>
+</head>
+<body>
+<nav><div class="c"><a href="/" style="margin:0;font-weight:700;color:#fff">Aikit Pros</a><div><a href="/landing.html">Home</a><a href="/pricing.html">Pricing</a><a href="/demo.html">Demo</a><a href="/competition.html">Why Us</a></div></div></nav>
+
+<header class="hero"><div class="c">
+<h1>AikitPros × Dify</h1>
+<p>Drop our one-node workflow into Dify. Brief in → Script + Image + Music + 8s Video out, in 60 seconds, for $0.35 per campaign.</p>
+<a class="btn-primary" href="/aikitpros-dify.yml" download>⬇ Download DSL (.yml)</a>
+<a class="btn-secondary" href="https://marketplace.dify.ai" target="_blank" rel="noopener">Open Dify Marketplace</a>
+</div></header>
+
+<section><div class="c">
+<h2>🚀 4-Step Install</h2>
+<div class="steps">
+<div class="step"><span class="num">1</span><h3>Download DSL</h3><p>Grab <code>aikitpros-dify.yml</code> — a ready-to-import Dify workflow.</p></div>
+<div class="step"><span class="num">2</span><h3>Import to Dify</h3><p>Studio → Create App → Import DSL → select the file.</p></div>
+<div class="step"><span class="num">3</span><h3>Add API key</h3><p>Paste your Ace Data Cloud key into the HTTP node header.</p></div>
+<div class="step"><span class="num">4</span><h3>Publish & Run</h3><p>Expose as API, web app, or Slack/Telegram bot — your call.</p></div>
+</div>
+</div></section>
+
+<section><div class="c">
+<h2>🧩 Workflow Graph</h2>
+<p class="muted">Single HTTP node wraps the full AikitPros campaign pipeline. No chaining required.</p>
+<div class="nodes">
+<div class="node"><span class="tag">INPUT</span><h3>brief</h3><p>User's campaign prompt. e.g. <code>Promote organic mango juice to Gulf moms</code>. Optional <code>lang</code>, <code>duration</code>, <code>engine</code>.</p></div>
+<div class="node"><span class="tag">HTTP NODE</span><h3>POST /v1/campaign</h3><p>Calls <code>api.aikitpros.com</code>. Auto-routes to Veo3 / Kling / Runway / Pika. Triple-tier fallback built-in.</p></div>
+<div class="node"><span class="tag">OUTPUT</span><h3>campaign</h3><p>JSON: <code>script</code>, <code>image_url</code>, <code>music_url</code>, <code>video_url</code>, <code>cost_usd</code>, <code>engine_used</code>.</p></div>
+</div>
+</div></section>
+
+<section><div class="c">
+<h2>📋 HTTP Node Config</h2>
+<pre>Method:  POST
+URL:     https://api.aikitpros.com/v1/campaign
+Headers:
+  Authorization: Bearer {{#env.ACE_KEY#}}
+  Content-Type:  application/json
+Body:
+  {
+    "brief":    "{{#start.brief#}}",
+    "lang":     "{{#start.lang#}}",
+    "duration": {{#start.duration#}},
+    "engine":   "auto"
+  }
+Timeout: 90s</pre>
+</div></section>
+
+<section><div class="c">
+<h2>🔌 Variable Mapping</h2>
+<table>
+<thead><tr><th>Dify variable</th><th>Type</th><th>Source</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>brief</code></td><td>string</td><td>Start node</td><td>"Promote mango juice to Gulf moms"</td></tr>
+<tr><td><code>lang</code></td><td>select</td><td>Start node</td><td>en / ar / zh</td></tr>
+<tr><td><code>duration</code></td><td>number</td><td>Start node</td><td>8</td></tr>
+<tr><td><code>ACE_KEY</code></td><td>secret</td><td>Env variable</td><td>sk-ace-…</td></tr>
+<tr><td><code>video_url</code></td><td>string</td><td>HTTP response</td><td>https://cdn.aikitpros.com/…mp4</td></tr>
+</tbody>
+</table>
+</div></section>
+
+<section><div class="c">
+<h2>🧪 Test it from Dify</h2>
+<p>After import, click <b>Run</b> in the Dify debug panel with this payload:</p>
+<pre>{
+  "brief": "Launch organic mango juice for Gulf moms, warm & trustworthy tone",
+  "lang":  "ar",
+  "duration": 8
+}</pre>
+<p class="muted">Expected: one MP4 URL + script + cover image + 15s background music. Median latency 38s. Cost $0.35.</p>
+</div></section>
+
+<section><div class="c" style="text-align:center">
+<h2>Ready to ship?</h2>
+<p class="muted" style="margin:8px 0 20px">Import the DSL, add your key, publish. Your first campaign runs in under 2 minutes.</p>
+<a class="btn-primary" href="/aikitpros-dify.yml" download>⬇ Download DSL</a>
+<a class="btn-secondary" href="/demo.html">Try Live Demo</a>
+</div></section>
+
+<footer>© 2026 AikitPros · Built on <a href="https://acedatacloud.com">Ace Data Cloud</a> · <a href="/landing.html">Home</a> · <a href="/competition.html">Competition</a></footer>
+</body>
+</html>
